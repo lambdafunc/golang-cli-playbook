@@ -1,6 +1,6 @@
 ## Purpose of this module
-This module will teach you how to use `go doc` to prints the documentation for a package, a function, a variable, or a method.
-We will learn the `go doc` command and the possible parameters available to it
+This module will teach you how to use `go doc` to prints the documentation for a function
+Similarly, the command can be used to print the documentation for a package, a variable, or a method.
 
 
 ## Verify locally
@@ -10,25 +10,26 @@ To test this module locally:
 * Run command `go test -run Module6` to run all tests for module 6, or
 * Run command `go test -v -run Module6` to run all tests for module 6 with verbose information
 
-## Task 1
+## Task 1: Add a comment in source code
 A `go` source file named `module6.go` is provided, 
-but the documentation for a function (`FunctionForModule6GoDoc`)is missing.
+but the documentation for a function (`FunctionForModule6GoDoc`) is missing.
 
-Complete the task by adding a comment in the source file.
+Complete the task by adding a comment in the source file in an editor.
 
 
-## Task 2
-To see the documentation added in Task 1, we need to specify a parameter to the `go doc` command.
+## Task 2: Print out the added comment and direct to a file
+Read the `go doc` command document from `go help doc` in the terminal/
 
-Read the `go doc` command document, and provide a parameter in the following format:
+Since `go doc` outputs to `stdout`, we need to redirect to a text file using the following format:
+(Note that typically you do not need to have the redirection part, this is just for our verification)
 ```
-go doc sym.methodOrField
+go doc <methodName> > module6.txt
 ```
 
-Does the command show the documentation added in Task 1?
+In the terminal, type in the complete `go doc` command.
 
 
-## Extra help
-Here is the command to get more information on `go doc`: 
-- `go help doc`
+Open `module6.txt` in an editor. 
+Does it contain the documentation you added in Task 1?
+
 
